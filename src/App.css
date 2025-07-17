@@ -1,0 +1,17 @@
+.scrollbar::-webkit-scrollbar-button {
+  display: none;
+}
+/* .scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+/* scrollbar-width: none; Firefox */
+/* } */
+.scrollbar::-webkit-scrollbar {
+  width: thin;
+}
+.navbar {
+  /* background-color: ; */
+  background-color: #baa261;
+}
+.footer {
+  background-color: #2b2b2b;
+}
