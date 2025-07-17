@@ -59,7 +59,7 @@ const ContextProvider = (props) => {
   async function RegisterAPI(data) {
     console.log(data);
     try {
-      let response = await axios.post("http://localhost:9000/signup", data);
+      let response = await axios.post("https://recipe-founder-server.vercel.app/signup", data);
       console.log(response.data);
       toast.success("Registered Successfully");
       localStorage.setItem("token", response.data.token);
@@ -74,7 +74,7 @@ const ContextProvider = (props) => {
   async function LoginAPI(data) {
     console.log(data);
     try {
-      let response = await axios.post("http://localhost:9000/login", data);
+      let response = await axios.post("https://recipe-founder-server.vercel.app/login", data);
       console.log(response.data);
       toast.success("Login Successfully");
       localStorage.setItem("token", response.data.token);
@@ -93,7 +93,7 @@ const ContextProvider = (props) => {
         );
         if (!duplicateRecipe) {
           let response = await axios.post(
-            "http://localhost:9000/favRecipe",
+            "https://recipe-founder-server.vercel.app/favRecipe",
             recipe,
             {
               headers: {
@@ -119,7 +119,7 @@ const ContextProvider = (props) => {
     
       try {
         let response = await axios.get(
-          "http://localhost:9000/fetchAllFavRecipe",
+          "https://recipe-founder-server.vercel.app/fetchAllFavRecipe",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -138,7 +138,7 @@ const ContextProvider = (props) => {
   // remove button of login user fav
   async function removeLoginFav(id){
    try {
-    let response = await axios.delete(`http://localhost:9000/delete/${id}`)
+    let response = await axios.delete(`https://recipe-founder-server.vercel.app/delete/${id}`)
     console.log(response.data)
     toast.success("Remove Successfully")
     fetchAllFavRecipesRegister()
