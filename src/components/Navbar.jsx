@@ -177,7 +177,7 @@ const Navbar = () => {
               ) : (
                 <Link
                   to={"/register"}
-                  className="p-1  hover:text-white rounded text-gray-700 text-lg ml-4 transition duration-500 ease-in-out  cursor-pointer focus:outline-none overflow-hidden"
+                  className={`p-1  hover:text-white rounded text-gray-700 text-lg ml-4 transition duration-500 ease-in-out  cursor-pointer focus:outline-none overflow-hidden`}
                 >
                   SignIn
                 </Link>
@@ -226,6 +226,7 @@ const Navbar = () => {
               />
               {SuggestionRecipe && searchData ? (
                 <ul
+                 ref={boxref}
                   className={`absolute z-50 w-full fixed text-white bg-transparent  scrollbar backdrop-blur-lg shadow-lg mt-1 rounded-md border border-gray-100 max-h-48 ${
                     !error ? "overflow-y-scroll" : "overflow-hidden"
                   }`}
@@ -236,6 +237,7 @@ const Navbar = () => {
                         <li
                           className="px-4 py-2 text-gray-900 font-semibold opacity-70  cursor-pointer hover:bg-gray-100 hover:text-black"
                           key={item.id}
+                          onClick={() => handlelist(item.name)}
                         >
                           {item.name}
                         </li>
@@ -268,7 +270,7 @@ const Navbar = () => {
             ) : (
               <Link
                 to={"/register"}
-                className="p-1 hover:text-black text-lg ml-4 font-semibold cursor-pointer text-white focus:outline-none overflow-hidden"
+                className={`p-1 hover:text-black text-lg text-gray-700 font-semibold cursor-pointer  focus:outline-none overflow-hidden`}
               >
                 SignIn
               </Link>
