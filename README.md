@@ -1,12 +1,66 @@
-# React + Vite
+🥘 Recipe Founder
+Recipe Founder is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that allows users to discover delicious recipes, search for them, and save their favorites. It includes JWT-based authentication, user routing, and seamless recipe search powered by Axios.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Live Demo :-- https://recipe-founder-ten.vercel.app
 
-Currently, two official plugins are available:
+🔐 Features
+🔑 JWT Authentication – Secure login & registration
+🔍 Recipe Search – Find recipes using a search bar (powered by Axios)
+❤️ Favourites Section – Save and manage your favorite recipes
+🛣️ Routing – User-friendly navigation and route protection
+💾 MongoDB Integration – Stores users and their favorite recipes
+🖼️ Screenshots
+(Optional: Add screenshots or demo video link)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+🏗️ Tech Stack
+Frontend:
+React.js
+Axios
+React Router
+Context API 
 
-## Expanding the ESLint configuration
+CSS / TailwindCSS / Styled Components (based on your choice)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Backend: Node.js/Express.js/MongoDB/Mongoose/JWT (jsonwebtoken)/bcryptjs (for password hashing)/CORS / dotenv
+
+1. Clone the repository
+git clone https://github.com/your-username/recipe-founder.git
+cd recipe-founder
+
+2. Create a .env file in /server:
+PORT=5000
+MONGO_URI=your_mongodb_uri
+JWT_SECRET=your_jwt_secret
+
+🔐 JWT Authentication
+Protected routes are accessed only with valid JWT.
+Tokens are stored in localStorage .
+Middleware handles route protection on backend.
+
+🧠 Concepts Implemented
+React Hooks (useState, useEffect)
+Axios for HTTP requests
+Protected Routes using React Router
+Password hashing with bcryptjs
+Secure authentication with jsonwebtoken
+
+🚀 Future Enhancements
+Pagination and loading skeletons
+Category-wise filtering
+Rating system
+Recipe creation & sharing
+Profile settings & image uploads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
