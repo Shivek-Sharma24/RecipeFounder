@@ -104,7 +104,8 @@ const Navbar = () => {
               className="flex items-center"
             >
               <img
-                src="https://cdn-icons-png.flaticon.com/512/1869/1869042.png"
+                src="../public/image/food-recipelogo (1).png"
+                // src="https://cdn-icons-png.flaticon.com/512/1869/1869042.png"
                 alt="Logo"
                 className="h-10 w-auto"
               />
@@ -226,7 +227,7 @@ const Navbar = () => {
               />
               {SuggestionRecipe && searchData ? (
                 <ul
-                 ref={boxref}
+                  ref={boxref}
                   className={`absolute z-50 w-full fixed text-white bg-transparent  scrollbar backdrop-blur-lg shadow-lg mt-1 rounded-md border border-gray-100 max-h-48 ${
                     !error ? "overflow-y-scroll" : "overflow-hidden"
                   }`}
@@ -275,7 +276,7 @@ const Navbar = () => {
                 SignIn
               </Link>
             )}
-          
+
             {/* Favorite Icon */}
             <Link
               to={"/cart"}

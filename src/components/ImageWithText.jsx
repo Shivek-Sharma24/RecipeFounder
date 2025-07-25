@@ -1,12 +1,12 @@
 import React from "react";
 const ImageWithText = () => {
-  console.log("hlo");
+  
   return (
     <div className="grid w-full border-0 md:grid-cols-12 ">
       <img
         loading="lazy"
-        
-         src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_1280,ar_16:9/v1/img/recipes/43/36/97/h40cdjMARGCcgOUjZpOy_mac%2520and%2520cheese-1176.jpg"
+        src="../public/image/imageandtext-imageOFFoodrecipe (1).webp"
+        //  src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_1280,ar_16:9/v1/img/recipes/43/36/97/h40cdjMARGCcgOUjZpOy_mac%2520and%2520cheese-1176.jpg"
         alt=""
         className="h-96 object-cover w-full overflow-hidden col-span-12 lg:col-span-7 lg:w-[98%]"
       />
