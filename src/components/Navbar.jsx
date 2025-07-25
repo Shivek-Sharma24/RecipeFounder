@@ -104,8 +104,8 @@ const Navbar = () => {
               className="flex items-center"
             >
               <img
-                src="../public/image/food-recipelogo (1).png"
-                // src="https://cdn-icons-png.flaticon.com/512/1869/1869042.png"
+                // src="../public/image/food-recipelogo (1).png"
+                src="https://cdn-icons-png.flaticon.com/512/1869/1869042.png"
                 alt="Logo"
                 className="h-10 w-auto"
               />
