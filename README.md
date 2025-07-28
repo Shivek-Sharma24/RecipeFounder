@@ -1,4 +1,4 @@
-🥘 Recipe Founder
+# Recipe Founder
 Recipe Founder is a full-stack MERN (MongoDB, Express.js, React.js, Node.js) application that allows users to discover delicious recipes, search for them, and save their favorites. It includes JWT-based authentication, user routing, and seamless recipe search powered by Axios.
 
 Live Demo :-- https://recipe-founder-ten.vercel.app
@@ -24,10 +24,11 @@ CSS / TailwindCSS / Styled Components (based on your choice)
 Backend: Node.js/Express.js/MongoDB/Mongoose/JWT (jsonwebtoken)/bcryptjs (for password hashing)/CORS / dotenv
 
 1. Clone the repository
-git clone https://github.com/your-username/recipe-founder.git
+git clone Frontend:- https://github.com/your-username/recipe-founder.git
+git clone Backend :- https://github.com/Shivek-Sharma24/RecipeFounderServer
 cd recipe-founder
 
-2. Create a .env file in /server:
+3. Create a .env file in /server:
 PORT=5000
 MONGO_URI=your_mongodb_uri
 JWT_SECRET=your_jwt_secret
