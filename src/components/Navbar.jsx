@@ -4,6 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import "../App.css";
 import { context } from "../context/ContextApi";
 import toast from "react-hot-toast";
+import React from "react";
 
 const Navbar = () => {
   const { displayRecipe } = useContext(context);
@@ -293,4 +294,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);

@@ -8,8 +8,11 @@ const ContextProvider = (props) => {
   const [favRecipe, SetfavRecipe] = useState([]);
   const [AllRecipe, setAllRecipe] = useState([]);
   const [LoginFavRecipe, setLoginFavRecipe] = useState([]);
+  const [loading , setloading] = useState(false)
   const navigate = useNavigate();
   let token = localStorage.getItem("token");
+
+
   async function displayRecipe(query) {
     if (query) {
       let response = await axios.get(
@@ -57,6 +60,7 @@ const ContextProvider = (props) => {
   // Authentication functions start
   // ---->>> Signup function
   async function RegisterAPI(data) {
+    setloading(true)
     console.log(data);
     try {
       let response = await axios.post("https://recipe-founder-server.vercel.app/signup", data);
@@ -67,21 +71,27 @@ const ContextProvider = (props) => {
     } catch (error) {
       toast.error("failed to register your account ");
       console.log("error in signup api", error);
+    }finally{
+      setloading(false)
     }
   }
 
   // ---> Login API
   async function LoginAPI(data) {
-    console.log(data);
+     setloading(true)
+    // console.log(data);
     try {
       let response = await axios.post("https://recipe-founder-server.vercel.app/login", data);
       console.log(response.data);
       toast.success("Login Successfully");
       localStorage.setItem("token", response.data.token);
+      setloading(false)
       navigate("/");
     } catch (error) {
       toast.error("Login Failed");
       console.log("Login error", error);
+    }finally{
+      setloading(false)
     }
   }
 
@@ -166,7 +176,8 @@ const ContextProvider = (props) => {
         fetchAllFavRecipesRegister,
         LoginFavRecipe,
         isLoginFav,
-        removeLoginFav
+        removeLoginFav,
+        loading
       }}
     >
       {props.children}

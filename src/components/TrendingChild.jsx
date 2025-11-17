@@ -39,4 +39,4 @@ const TrendingChild = () => {
   );
 };
 
-export default TrendingChild;
+export default React.memo(TrendingChild);

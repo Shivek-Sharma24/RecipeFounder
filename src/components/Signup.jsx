@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { context } from "../context/ContextApi";
 
 const Signup = () => {
-  const { RegisterAPI } = useContext(context);
+  const { RegisterAPI, loading } = useContext(context);
   const [inputs, setInputs] = useState({
     username: "",
     email: "",
@@ -97,10 +97,11 @@ const Signup = () => {
             </div>
             <div className="mt-8">
               <button
-                className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
+                disabled={loading}
+                className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
                 onClick={handleSubmit}
               >
-                Register
+                {loading ? "Submitting...":'Register'}
               </button>
             </div>
             <div className="mt-4 flex items-center justify-between">

@@ -13,6 +13,7 @@ import Login from "./components/Login";
 import { useContext } from "react";
 import { context } from "./context/ContextApi";
 import { useEffect } from "react";
+import React from "react";
 
 function App() {
   const {fetchAllFavRecipesRegister} = useContext(context);
@@ -40,4 +41,4 @@ function App() {
   );
 }
 
-export default App;
+export default React.memo(App);

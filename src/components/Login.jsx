@@ -4,7 +4,7 @@ import { useState } from "react";
 import { context } from "../context/ContextApi";
 
 const Login = () => {
-  const { LoginAPI } = useContext(context);
+  const { LoginAPI, loading } = useContext(context);
 
   const [inputs, setInputs] = useState({
     email: "",
@@ -77,9 +77,12 @@ const Login = () => {
             <div className="mt-8">
               <button
                 onClick={handleSubmit}
-                className="bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600"
+                className={
+                  "bg-gray-700 text-white font-bold py-2 px-4 w-full rounded hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
+                }
+                disabled={loading}
               >
-                Login
+                Login{loading ? "Logging in..." : "Login"}
               </button>
             </div>
             <div className="mt-4 flex items-center justify-between">
@@ -96,4 +99,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default React.memo(Login);
