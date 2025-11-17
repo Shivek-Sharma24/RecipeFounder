@@ -82,7 +82,7 @@ const Login = () => {
                 }
                 disabled={loading}
               >
-                Login{loading ? "Logging in..." : "Login"}
+                {loading ? "Logging in..." : "Login"}
               </button>
             </div>
             <div className="mt-4 flex items-center justify-between">
