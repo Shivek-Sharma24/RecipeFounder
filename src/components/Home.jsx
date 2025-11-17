@@ -13,7 +13,7 @@ const Home = () => {
           This is Latest recipes.
         </h1>
         {/* <div className="text-center grid grid-cols-1 p-1 md:p-2 m-1 md:m-2 gap-2 place-items-center rounded-lg md:gap-2 md:grid-cols-3"> */}
-        <div class="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10 md:gap-2 xl:gap-10 mb-2 mt-2">
+        <div className="grid grid-cols-1 md:grid-cols-3 sm:grid-cols-2 gap-10 md:gap-2 xl:gap-10 mb-2 mt-2">
           {!AllRecipe.length > 0
             ? Demodata.map((recipe) => (
                 <UnitComponent recipe={recipe} key={recipe.id} />
