@@ -22,7 +22,7 @@ function App() {
     if(token){
       fetchAllFavRecipesRegister()
     }
-  } , [fetchAllFavRecipesRegister])
+  } , )
   return (
     <>
       <Toaster position="top-center" reverseOrder={false} />

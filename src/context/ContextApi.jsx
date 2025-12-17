@@ -62,10 +62,10 @@ const ContextProvider = (props) => {
   // ---->>> Signup function
   async function RegisterAPI(data) {
     setloading(true)
-    console.log(data);
+    // console.log(data);
     try {
       let response = await axios.post("https://recipe-founder-server.vercel.app/signup", data);
-      console.log(response.data);
+      // console.log(response.data);
       toast.success("Registered Successfully");
       localStorage.setItem("token", response.data.token);
       navigate("/");
