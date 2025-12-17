@@ -2,6 +2,7 @@ import { createContext, useState } from "react";
 import toast from "react-hot-toast";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+// eslint-disable-next-line react-refresh/only-export-components
 export const context = createContext();
 
 const ContextProvider = (props) => {
