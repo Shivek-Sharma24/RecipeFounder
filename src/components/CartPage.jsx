@@ -7,13 +7,13 @@ const CartPage = () => {
     useContext(context);
   const token = localStorage.getItem("token");
   useEffect(() => {
-    let mount = true;
-    if (token && mount) {
+    // let mount = true;
+    if (token) {
       fetchAllFavRecipesRegister();
     }
-   return ()=>{
-   mount = false
-   }
+  //  return ()=>{
+  //  mount = false
+  //  }
   }, [token]);
 
   return (
