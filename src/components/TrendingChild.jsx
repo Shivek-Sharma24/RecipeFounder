@@ -12,7 +12,7 @@ const TrendingChild = () => {
         src={image}
         loading="lazy"
         alt="recipe image"
-        className=" lg:h-[100%] object-fill w-full overflow-hidden col-span-12 lg:col-span-8 lg:w-[100%] md:w-[100%]"
+        className=" lg:h-[100%] object-cover w-full overflow-hidden col-span-12 lg:col-span-8 lg:w-[100%] md:w-[100%]"
       />
       <div className="col-span-12 lg:col-span-4 mt-5 space-y-5  p-2">
         <p className="text-md text-gray-500 m-1 mt-2 font-semibold font-mono">

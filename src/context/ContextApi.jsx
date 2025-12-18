@@ -55,7 +55,7 @@ const ContextProvider = (props) => {
   function removeFav(id) {
     let updateCart = favRecipe.filter((item) => item.id !== id);
     SetfavRecipe(updateCart);
-    toast.success("remove Recipe  from Favourites");
+    toast.success("remove Recipe from Favourites");
   }
 
   // Authentication functions start
@@ -114,6 +114,7 @@ const ContextProvider = (props) => {
             }
           );
           toast.success("Added to Favourites");
+         fetchAllFavRecipesRegister()
          console.log(response.data)
         } else {
           toast.error("Recipe Already in Favourites!");
@@ -152,6 +153,7 @@ const ContextProvider = (props) => {
     let response = await axios.delete(`https://recipe-founder-server.vercel.app/delete/${id}`)
     console.log(response.data)
     toast.success("Remove Successfully")
+   localStorage.setItem("fav_updated", Date.now());
     fetchAllFavRecipesRegister()
    } catch (error) {
     toast.error("Unable to delete")

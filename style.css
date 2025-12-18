@@ -1,0 +1,22 @@
+#parent{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+#parent::-webkit-scrollbar {
+height: 4px;
+}
+#parent::-webkit-scrollbar-track {
+  background: transparent; /* hide track */
+}
+#parent::-webkit-scrollbar-thumb {
+  background: rgba(149, 147, 147, 0.3);
+  border-radius: 10px;
+}
+#child{
+    display: inline-block;
+    width: 300px;
+    height: 250px;
+    margin: 10px;
+}

@@ -6,15 +6,29 @@ const CartPage = () => {
   const { favRecipe, LoginFavRecipe, fetchAllFavRecipesRegister } =
     useContext(context);
   const token = localStorage.getItem("token");
+
   useEffect(() => {
-    // let mount = true;
     if (token) {
       fetchAllFavRecipesRegister();
     }
-  //  return ()=>{
-  //  mount = false
-  //  }
+   return ()=>{
+   }
   }, [token]);
+  
+  useEffect(() => {
+  const handleStorageChange = (event) => {
+    if (event.key === "fav_updated") {
+      fetchAllFavRecipesRegister();
+    }
+  };
+
+  window.addEventListener("storage", handleStorageChange);
+
+  return () => {
+    window.removeEventListener("storage", handleStorageChange);
+  };
+}, []);
+
 
   return (
     <div className="grid md:grid-cols-3 xl:grid-cols-4 lg:grid-cols-3 gap-2 mb-4">

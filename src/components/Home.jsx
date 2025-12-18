@@ -1,11 +1,20 @@
 import UnitComponent from "./UnitComponent";
-import React, { useContext } from "react";
+import React, { useContext , useEffect} from "react";
 import Demodata from "../context/ArrData";
 import ImageWithText from "./ImageWithText";
 import TrendingComp from "./TrendingComp";
 import { context } from "../context/ContextApi";
 const Home = () => {
-  const { AllRecipe } = useContext(context);
+  const { AllRecipe , fetchAllFavRecipesRegister} = useContext(context);
+  const token = localStorage.getItem("token");
+
+   useEffect(() => {
+    
+    if (token) {
+      fetchAllFavRecipesRegister();
+    }
+  }, [token]);
+
   return (
     <>
       <div className="grid min-h-screen border-0 m-2 w-[95%] md:w-[75%] mx-auto shadow-xl">
@@ -28,7 +37,10 @@ const Home = () => {
           <p className="text-2xl  mt-4 md:mt-0  text-white font-medium font-[verdana] tracking-widest">
             TRENDING NOW
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2">
+          <div
+          //  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-2"
+          id="parent"
+           >
             <TrendingComp
               name="Paneer Recipe"
               id="1"
@@ -42,7 +54,8 @@ const Home = () => {
             <TrendingComp
               name="Sambar Recipe"
               id="3"
-              image="https://img.freepik.com/free-photo/indian-dhal-spicy-curry-bowl-spices-herbs-rustic-black-wooden-table_2829-18712.jpg?ga=GA1.1.950671070.1749485799&semt=ais_items_boosted&w=740"
+              image="https://img.freepik.com/free-photo/top-view-high-protein-meal-composition_23-2149089634.jpg?ga=GA1.1.950671070.1749485799&semt=ais_items_boosted&w=740"
+
             />
             <TrendingComp
               name="Dal Makhani Recipe"

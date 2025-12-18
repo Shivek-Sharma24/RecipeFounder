@@ -67,6 +67,10 @@ const Navbar = () => {
     setMenu((prev) => !prev);
   }
 
+  useEffect(()=>{
+    setMenu(false)
+  } , [location.pathname])
+
   useEffect(() => {
     document.addEventListener("click", handleOutsideClick);
     const mediaQuery = window.matchMedia("(min-width: 768px)"); // md in Tailwind

@@ -35,7 +35,7 @@ const UnitComponent = ({ recipe }) => {
                   ? isFavorite(recipe.id)
                     ? "text-red-500"
                     : "text-white"
-                  : isLoginFav(recipe.name)
+                   : isLoginFav(recipe.name)
                   ? "text-red-500"
                   : "text-white"
               } mx-2 hover:text-red-600`}
