@@ -21,7 +21,7 @@ const UnitComponent = ({ recipe }) => {
           <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25"></div>
         </Link>
 
-        <div className="text-sm absolute top-0 right-0 bg-indigo-500 px-4 text-white rounded-full h-[3rem] w-[3rem] flex flex-col items-center justify-center mt-3 mr-3 hover:bg-white hover:text-indigo-600 transition duration-500 ease-in-out">
+        <div className="text-sm absolute top-0 right-0 bg-indigo-500 px-4 text-white rounded-full h-[3rem] w-[3rem] flex flex-col items-center justify-center mt-3 mr-3 hover:bg-indigo-800 hover:text-indigo-600 transition duration-500 ease-in-out">
           <button
             onClick={
               !token
@@ -35,10 +35,10 @@ const UnitComponent = ({ recipe }) => {
                   ? isFavorite(recipe.id)
                     ? "text-red-500"
                     : "text-white"
-                   : isLoginFav(recipe.name)
+                  : isLoginFav(recipe.name)
                   ? "text-red-500"
                   : "text-white"
-              } mx-2 hover:text-red-600`}
+              } mx-2`}
             ></i>
           </button>
         </div>
